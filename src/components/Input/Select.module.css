@@ -1,0 +1,35 @@
+.wrapper {
+    margin: 15px;
+    padding: 5px;
+    width: 80px;
+    box-sizing: border-box;
+}
+
+.wrapper:hover {
+    border: 1px cornflowerblue solid;
+    box-sizing: border-box;
+}
+
+
+.selectName {
+    cursor: default;
+    padding: 5px;
+    border-bottom: solid cornflowerblue 3px;
+}
+
+.optionName {
+    cursor: default;
+    padding: 5px;
+    background-color: #e3e1e1;
+}
+
+.optionName.selected {
+    background-color: cornflowerblue;
+    color: white;
+}
+
+.optionName:hover {
+    cursor: default;
+    background-color: cornflowerblue;
+    color: white;
+}

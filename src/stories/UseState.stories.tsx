@@ -55,22 +55,21 @@ export const UseEffectExample = () => {
 };
 
 
+
 export const setTimeoutExample = () => {
   //useState вызывает функцию только 1 раз (а примитивы каждый раз!)
   const [counter, setCounter] = useState(1);
   const [fake, setFake] = useState(1);
 
   useEffect(()=> {
-    /*setInterval(() => {
+    setInterval(() => {
       console.log(counter)
       setCounter((state) => state + 1);
-    }, 1000)*/
+    }, 1000)
 
   }, []) //every render
 
   return <>
-   {/* <button onClick={() => setFake( fake + 1)}>Fake</button>
-    <button onClick={() => setCounter( counter + 1)}>Counter</button>*/}
-    {counter} {fake}
+    Hello, counter: {counter}
   </>
 };

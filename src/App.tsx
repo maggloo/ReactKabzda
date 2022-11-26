@@ -5,6 +5,7 @@ import UncontrolledAccordion from "./components/UncontrolledAccordion/Uncontroll
 import {UncontrolledRating} from "./components/UncontrolledAccordion/Rating/UncontrolledRating";
 import {ItemType, Select} from "./components/Input/Select";
 import Accordion from "./components/Accordion/Accordion";
+import Clock from "./components/Clock/Clock";
 
 function App() {
     let [ratingValue, setRatingValue] = useState<RatingValueType>(0);
@@ -17,6 +18,7 @@ function App() {
         <div>
             <OnOff value={on} onClick={setOn}/>
             <UncontrolledAccordion title={'Hello'} />
+            <Clock digital={false}/>
 
             <Rating value={ratingValue} onClick={setRatingValue}/>
 

@@ -56,6 +56,46 @@ export const UseEffectExample = () => {
 
 
 
+export const ResetUseEffect = () => {
+  const [counter, setCounter] = useState(1);
+  console.log('Component rendered');
+
+  useEffect(()=> {
+    console.log('Effect')
+    return () => {
+      console.log('reset effect')
+    }
+  }, [counter]) //only first render 'component did mount'
+
+  return <>
+    Hello, counter: {counter}
+    <button onClick={() => setCounter(counter + 1)}>+</button>
+  </>
+}
+
+
+export const KeysTrackerExample = () => {
+  const [text, setText] = useState('');
+
+  useEffect(()=> {
+    const handler = (e: KeyboardEvent) => {
+      console.log(e.key)
+      setText(text + e.key);
+    }
+
+    window.document.addEventListener('keypress', handler)
+
+    return () => {
+      window.document.removeEventListener('keypress', handler)
+    }
+  }, [text]) //only first render 'component did mount'
+
+  return <>
+    Typed text: {text}
+  </>
+}
+
+/*
 export const setTimeoutExample = () => {
   //useState вызывает функцию только 1 раз (а примитивы каждый раз!)
   const [counter, setCounter] = useState(1);
@@ -72,4 +112,4 @@ export const setTimeoutExample = () => {
   return <>
     Hello, counter: {counter}
   </>
-};
+};*/

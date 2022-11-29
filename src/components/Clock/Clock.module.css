@@ -1,11 +1,13 @@
+.wrapper {
+    padding: 10px;
+}
+
 .parentClock {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 200px;
     height: 200px;
-    margin: 50px;
-    background-color: rgb(190, 190, 245);
     border: solid 2px rgb(173, 173, 248);
     border-radius: 50%;
     position: relative;
@@ -20,19 +22,19 @@
 }
 
 .hrs {
-    width: 10px;
+    width: 5px;
     height: 70px;
-    transform-origin: 5px 5px;
+    transform-origin: 2.5px 5px;
 }
 
 .min {
-    width: 9px;
+    width: 5px;
     height: 80px;
-    transform-origin: 4.5px 5px;
+    transform-origin: 2.5px 5px;
 }
 
 .sec {
-    width: 7px;
+    width: 5px;
     height: 90px;
-    transform-origin: 3.5px 5px;
+    transform-origin: 2.5px 5px;
 }
